@@ -19,9 +19,9 @@ setuptools.setup(
     packages=setuptools.find_packages(where="cdk_blog_dynamodb"),
 
     install_requires=[
-        "aws-cdk.core==1.36.1",
-        "aws-cdk.aws_lambda==1.36.1",
-        "aws-cdk.aws_dynamodb==1.36.1",
+        "aws-cdk.core==1.102.0",
+        "aws-cdk.aws_lambda==1.102.0",
+        "aws-cdk.aws_dynamodb==1.102.0",
     ],
 
     python_requires=">=3.6",
