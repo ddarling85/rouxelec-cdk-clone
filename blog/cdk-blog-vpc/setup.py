@@ -19,13 +19,13 @@ setuptools.setup(
     packages=setuptools.find_packages(where="cdk_blog_vpc"),
 
     install_requires=[
-        "aws-cdk.core==1.36.1",
-        "aws-cdk.aws_ec2==1.36.1",
-        "aws-cdk.aws_lambda==1.36.1",
-        "aws-cdk.aws_events==1.36.1",
-        "aws-cdk.aws_events_targets==1.36.1",
-        "aws-cdk.aws_ec2==1.36.1",
-        "aws-cdk.aws_cloudformation==1.36.1",
+        "aws-cdk.core==1.102.0",
+        "aws-cdk.aws_ec2==1.102.0",
+        "aws-cdk.aws_lambda==1.102.0",
+        "aws-cdk.aws_events==1.102.0",
+        "aws-cdk.aws_events_targets==1.102.0",
+        "aws-cdk.aws_ec2==1.102.0",
+        "aws-cdk.aws_cloudformation==1.102.0",
         "boto3==1.13.6",
     ],
 

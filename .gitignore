@@ -1,5 +1,6 @@
 # Windows junk files
 desktop.ini
+~*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -29,6 +30,13 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# Eclipse files
+.settings
+.project
+
+# VS Code files
+.vscode
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
