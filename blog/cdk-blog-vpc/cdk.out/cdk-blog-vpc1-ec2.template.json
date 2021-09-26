@@ -117,13 +117,11 @@
     "InstanceC1063A87": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "AvailabilityZone": "ca-central-1a",
+        "AvailabilityZone": "us-gov-east-1a",
         "IamInstanceProfile": {
           "Ref": "InstanceInstanceProfileAB5AEF02"
         },
-        "ImageId": {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-        },
+        "ImageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
         "InstanceType": "t2.micro",
         "KeyName": "test-ec2",
         "SecurityGroupIds": [
@@ -160,18 +158,6 @@
       "Metadata": {
         "aws:cdk:path": "cdk-blog-vpc1-ec2/Instance/Resource"
       }
-    },
-    "CDKMetadata": {
-      "Type": "AWS::CDK::Metadata",
-      "Properties": {
-        "Modules": "aws-cdk=1.102.0,@aws-cdk/assets=1.36.1,@aws-cdk/aws-apigateway=1.36.1,@aws-cdk/aws-applicationautoscaling=1.36.1,@aws-cdk/aws-autoscaling=1.36.1,@aws-cdk/aws-autoscaling-common=1.36.1,@aws-cdk/aws-autoscaling-hooktargets=1.36.1,@aws-cdk/aws-batch=1.36.1,@aws-cdk/aws-certificatemanager=1.36.1,@aws-cdk/aws-cloudformation=1.36.1,@aws-cdk/aws-cloudfront=1.36.1,@aws-cdk/aws-cloudwatch=1.36.1,@aws-cdk/aws-codebuild=1.36.1,@aws-cdk/aws-codecommit=1.36.1,@aws-cdk/aws-codepipeline=1.36.1,@aws-cdk/aws-cognito=1.36.1,@aws-cdk/aws-ec2=1.36.1,@aws-cdk/aws-ecr=1.36.1,@aws-cdk/aws-ecr-assets=1.36.1,@aws-cdk/aws-ecs=1.36.1,@aws-cdk/aws-elasticloadbalancing=1.36.1,@aws-cdk/aws-elasticloadbalancingv2=1.36.1,@aws-cdk/aws-events=1.36.1,@aws-cdk/aws-events-targets=1.36.1,@aws-cdk/aws-iam=1.36.1,@aws-cdk/aws-kms=1.36.1,@aws-cdk/aws-lambda=1.36.1,@aws-cdk/aws-logs=1.36.1,@aws-cdk/aws-route53=1.36.1,@aws-cdk/aws-route53-targets=1.36.1,@aws-cdk/aws-s3=1.36.1,@aws-cdk/aws-s3-assets=1.36.1,@aws-cdk/aws-sam=1.36.1,@aws-cdk/aws-secretsmanager=1.36.1,@aws-cdk/aws-servicediscovery=1.36.1,@aws-cdk/aws-sns=1.36.1,@aws-cdk/aws-sns-subscriptions=1.36.1,@aws-cdk/aws-sqs=1.36.1,@aws-cdk/aws-ssm=1.36.1,@aws-cdk/aws-stepfunctions=1.36.1,@aws-cdk/cloud-assembly-schema=1.36.1,@aws-cdk/core=1.36.1,@aws-cdk/custom-resources=1.36.1,@aws-cdk/cx-api=1.36.1,@aws-cdk/region-info=1.36.1,jsii-runtime=Python/3.6.10"
-      }
-    }
-  },
-  "Parameters": {
-    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
     }
   }
 }

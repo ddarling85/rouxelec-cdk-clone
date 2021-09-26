@@ -4,9 +4,9 @@ import json
 import subprocess
 
 
-ec2 = boto3.resource('ec2', region_name='us-gov-west-1')
-client = boto3.client('ec2', region_name='us-gov-west-1')
-dynamodb = boto3.resource('dynamodb', region_name='us-gov-west-1')
+ec2 = boto3.resource('ec2', region_name='us-gov-east-1')
+client = boto3.client('ec2', region_name='us-gov-east-1')
+dynamodb = boto3.resource('dynamodb', region_name='us-gov-east-1')
 
 
 cidr_range_table = dynamodb.Table('cidr_range_table')

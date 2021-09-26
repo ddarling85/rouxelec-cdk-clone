@@ -18,7 +18,7 @@ import ipaddress
 
 #VPC informations
 vpc_size="/16"
-default_vpc_cidr_range="10.0.0.0"+vpc_size
+default_vpc_cidr_range="10.15.0.0"+vpc_size
 max_vpc_cidr_range="10.255.0.0"+vpc_size
 vpc_nb_ips=65536
 

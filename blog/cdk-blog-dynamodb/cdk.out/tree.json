@@ -6,7 +6,11 @@
     "children": {
       "Tree": {
         "id": "Tree",
-        "path": "Tree"
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.102.0"
+        }
       },
       "cdk-blog-dynamodb": {
         "id": "cdk-blog-dynamodb",
@@ -40,12 +44,24 @@
                     },
                     "tableName": "cidr_range_table"
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.102.0"
                 }
               },
               "ScalingRole": {
                 "id": "ScalingRole",
-                "path": "cdk-blog-dynamodb/cidr_range_table/ScalingRole"
+                "path": "cdk-blog-dynamodb/cidr_range_table/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.102.0"
+                }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.102.0"
             }
           },
           "last_cidr_range_table": {
@@ -76,16 +92,44 @@
                     },
                     "tableName": "last_cidr_range_table"
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-dynamodb.CfnTable",
+                  "version": "1.102.0"
                 }
               },
               "ScalingRole": {
                 "id": "ScalingRole",
-                "path": "cdk-blog-dynamodb/last_cidr_range_table/ScalingRole"
+                "path": "cdk-blog-dynamodb/last_cidr_range_table/ScalingRole",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.102.0"
+                }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-dynamodb.Table",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-dynamodb/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.102.0"
     }
   }
 }

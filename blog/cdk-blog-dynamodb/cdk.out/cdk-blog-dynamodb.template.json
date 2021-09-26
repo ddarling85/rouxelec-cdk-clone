@@ -53,12 +53,6 @@
       "Metadata": {
         "aws:cdk:path": "cdk-blog-dynamodb/last_cidr_range_table/Resource"
       }
-    },
-    "CDKMetadata": {
-      "Type": "AWS::CDK::Metadata",
-      "Properties": {
-        "Modules": "aws-cdk=1.102.0,@aws-cdk/assets=1.36.1,@aws-cdk/aws-applicationautoscaling=1.36.1,@aws-cdk/aws-autoscaling-common=1.36.1,@aws-cdk/aws-cloudformation=1.36.1,@aws-cdk/aws-cloudwatch=1.36.1,@aws-cdk/aws-dynamodb=1.36.1,@aws-cdk/aws-ec2=1.36.1,@aws-cdk/aws-events=1.36.1,@aws-cdk/aws-iam=1.36.1,@aws-cdk/aws-kms=1.36.1,@aws-cdk/aws-lambda=1.36.1,@aws-cdk/aws-logs=1.36.1,@aws-cdk/aws-s3=1.36.1,@aws-cdk/aws-s3-assets=1.36.1,@aws-cdk/aws-sns=1.36.1,@aws-cdk/aws-sqs=1.36.1,@aws-cdk/aws-ssm=1.36.1,@aws-cdk/cloud-assembly-schema=1.36.1,@aws-cdk/core=1.36.1,@aws-cdk/custom-resources=1.36.1,@aws-cdk/cx-api=1.36.1,@aws-cdk/region-info=1.36.1,jsii-runtime=Python/3.6.10"
-      }
     }
   }
 }

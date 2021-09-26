@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import boto3
 import time
 from aws_cdk import core
@@ -12,9 +11,9 @@ from cdk_blog_vpc.cdk_blog_vpc_stack import CdkBlogMyCustomResourceStack
 from cdk_blog_vpc.cdk_blog_vpc_stack import EC2InstanceStack
 
 
-env_CA = core.Environment(account=os.environ['CDK_DEFAULT_ACCOUNT'],region="ca-central-1")
-env_US = core.Environment(account=os.environ['CDK_DEFAULT_ACCOUNT'],region="us-east-1")
-env_US_Gov = core.Environment(account=os.environ['CDK_DEFAULT_ACCOUNT'],region="us-gov-west-1")
+#env_CA = core.Environment(account=os.environ['832771389300'], region="ca-central-1")
+#env_US = core.Environment(account=os.environ['832771389300'], region="us-east-1")
+env_US_Gov = core.Environment(account="640806350733", region="us-gov-east-1")
 
 
 app = core.App()

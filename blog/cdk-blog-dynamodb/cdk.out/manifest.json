@@ -1,5 +1,5 @@
 {
-  "version": "1.33.0",
+  "version": "10.0.0",
   "artifacts": {
     "Tree": {
       "type": "cdk:tree",
@@ -9,7 +9,7 @@
     },
     "cdk-blog-dynamodb": {
       "type": "aws:cloudformation:stack",
-      "environment": "aws://unknown-account/ca-central-1",
+      "environment": "aws://unknown-account/us-gov-east-1",
       "properties": {
         "templateFile": "cdk-blog-dynamodb.template.json"
       },
@@ -17,20 +17,20 @@
         "/cdk-blog-dynamodb/cidr_range_table": [
           {
             "type": "aws:cdk:hasPhysicalName",
-            "data": "cidr_range_table",
+            "data": {
+              "Ref": "cidrrangetable2D729331"
+            },
             "trace": [
-              "ConstructNode.addMetadata (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/core/lib/construct-compat.js:306:62)",
-              "new Table (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:249:23)",
-              "obj._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49)",
-              "Kernel._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
-              "Kernel._create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
-              "Kernel.create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
-              "KernelHost.processRequest (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
-              "KernelHost.run (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
+              "ConstructNode.addMetadata (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:405:62)",
+              "new Table (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:481:23)",
+              "C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:461:21)"
             ]
           }
         ],
@@ -39,37 +39,35 @@
             "type": "aws:cdk:logicalId",
             "data": "cidrrangetable2D729331",
             "trace": [
-              "new Table (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:231:22)",
-              "obj._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49)",
-              "Kernel._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
-              "Kernel._create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
-              "Kernel.create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
-              "KernelHost.processRequest (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
-              "KernelHost.run (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
+              "new Table (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:456:22)",
+              "C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:461:21)"
             ]
           }
         ],
         "/cdk-blog-dynamodb/last_cidr_range_table": [
           {
             "type": "aws:cdk:hasPhysicalName",
-            "data": "last_cidr_range_table",
+            "data": {
+              "Ref": "lastcidrrangetable47B90BB3"
+            },
             "trace": [
-              "ConstructNode.addMetadata (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/core/lib/construct-compat.js:306:62)",
-              "new Table (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:249:23)",
-              "obj._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49)",
-              "Kernel._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
-              "Kernel._create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
-              "Kernel.create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
-              "KernelHost.processRequest (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
-              "KernelHost.run (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
+              "ConstructNode.addMetadata (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:405:62)",
+              "new Table (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:481:23)",
+              "C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:461:21)"
             ]
           }
         ],
@@ -78,48 +76,20 @@
             "type": "aws:cdk:logicalId",
             "data": "lastcidrrangetable47B90BB3",
             "trace": [
-              "new Table (/tmp/jsii-kernel-Dg0Sty/node_modules/@aws-cdk/aws-dynamodb/lib/table.js:231:22)",
-              "obj._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:49)",
-              "Kernel._wrapSandboxCode (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:8313:20)",
-              "Kernel._create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7853:26)",
-              "Kernel.create (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7600:21)",
-              "KernelHost.processRequest (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7388:28)",
-              "KernelHost.run (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7328:14)",
-              "Immediate.setImmediate [as _onImmediate] (/home/ec2-user/environment/cdk-blog-dynamodb/.env/lib/python3.6/dist-packages/jsii/_embedded/jsii/jsii-runtime.js:7331:37)",
-              "runCallback (timers.js:705:18)",
-              "tryOnImmediate (timers.js:676:5)",
-              "processImmediate (timers.js:658:5)"
+              "new Table (C:\\Users\\darryl\\AppData\\Local\\Temp\\jsii-kernel-YVJmXQ\\node_modules\\@aws-cdk\\aws-dynamodb\\lib\\table.js:456:22)",
+              "C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8582:24)",
+              "Kernel._create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:8154:34)",
+              "Kernel.create (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:7895:29)",
+              "KernelHost.processRequest (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9479:36)",
+              "KernelHost.run (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9442:22)",
+              "Immediate._onImmediate (C:\\Users\\darryl\\AppData\\Local\\Temp\\tmpg3u09pmz\\lib\\program.js:9443:46)",
+              "processImmediate (internal/timers.js:461:21)"
             ]
           }
         ]
-      }
-    }
-  },
-  "runtime": {
-    "libraries": {
-      "@aws-cdk/cloud-assembly-schema": "1.36.1",
-      "@aws-cdk/cx-api": "1.36.1",
-      "@aws-cdk/core": "1.36.1",
-      "@aws-cdk/region-info": "1.36.1",
-      "@aws-cdk/aws-iam": "1.36.1",
-      "@aws-cdk/aws-autoscaling-common": "1.36.1",
-      "@aws-cdk/aws-cloudwatch": "1.36.1",
-      "@aws-cdk/aws-applicationautoscaling": "1.36.1",
-      "@aws-cdk/aws-logs": "1.36.1",
-      "@aws-cdk/aws-events": "1.36.1",
-      "@aws-cdk/aws-kms": "1.36.1",
-      "@aws-cdk/aws-s3": "1.36.1",
-      "@aws-cdk/aws-ssm": "1.36.1",
-      "@aws-cdk/aws-ec2": "1.36.1",
-      "@aws-cdk/assets": "1.36.1",
-      "@aws-cdk/aws-s3-assets": "1.36.1",
-      "@aws-cdk/aws-sqs": "1.36.1",
-      "@aws-cdk/aws-lambda": "1.36.1",
-      "@aws-cdk/aws-sns": "1.36.1",
-      "@aws-cdk/aws-cloudformation": "1.36.1",
-      "@aws-cdk/custom-resources": "1.36.1",
-      "@aws-cdk/aws-dynamodb": "1.36.1",
-      "jsii-runtime": "Python/3.6.10"
+      },
+      "displayName": "cdk-blog-dynamodb"
     }
   }
 }

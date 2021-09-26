@@ -6,7 +6,11 @@
     "children": {
       "Tree": {
         "id": "Tree",
-        "path": "Tree"
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.102.0"
+        }
       },
       "cdk-blog-vpc-dev1": {
         "id": "cdk-blog-vpc-dev1",
@@ -22,7 +26,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.72.0.0/16",
+                    "cidrBlock": "10.21.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -33,6 +37,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet1": {
@@ -45,17 +53,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.72.0.0/24",
+                        "cidrBlock": "10.21.0.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
-                        "availabilityZone": "ca-central-1a",
+                        "availabilityZone": "us-gov-east-1a",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet1"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -63,14 +67,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet1"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet1/Acl"
+                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -88,6 +104,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -103,6 +123,10 @@
                           "Ref": "vpcdev1IngressSubnet1SubnetFC0D9474"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -119,8 +143,16 @@
                           "Ref": "vpcdev1IGW6087D4EA"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet2": {
@@ -133,17 +165,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.72.1.0/24",
+                        "cidrBlock": "10.21.1.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
-                        "availabilityZone": "ca-central-1b",
+                        "availabilityZone": "us-gov-east-1b",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet2"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -151,14 +179,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet2"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet2/Acl"
+                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -176,6 +216,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -191,6 +235,10 @@
                           "Ref": "vpcdev1IngressSubnet2SubnetF0D0F022"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -207,8 +255,16 @@
                           "Ref": "vpcdev1IGW6087D4EA"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet3": {
@@ -221,17 +277,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.72.2.0/24",
+                        "cidrBlock": "10.21.2.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
-                        "availabilityZone": "ca-central-1d",
+                        "availabilityZone": "us-gov-east-1c",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet3"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -239,14 +291,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet3"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet3/Acl"
+                    "path": "cdk-blog-vpc-dev1/vpc-dev1/IngressSubnet3/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -264,6 +328,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -279,6 +347,10 @@
                           "Ref": "vpcdev1IngressSubnet3SubnetD1B8A775"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -295,8 +367,16 @@
                           "Ref": "vpcdev1IGW6087D4EA"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IGW": {
@@ -312,6 +392,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                  "version": "1.102.0"
                 }
               },
               "VPCGW": {
@@ -327,8 +411,24 @@
                       "Ref": "vpcdev1IGW6087D4EA"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-dev1/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           },
           "Exports": {
@@ -337,14 +437,30 @@
             "children": {
               "Output{\"Ref\":\"vpcdev122B8E28D\"}": {
                 "id": "Output{\"Ref\":\"vpcdev122B8E28D\"}",
-                "path": "cdk-blog-vpc-dev1/Exports/Output{\"Ref\":\"vpcdev122B8E28D\"}"
+                "path": "cdk-blog-vpc-dev1/Exports/Output{\"Ref\":\"vpcdev122B8E28D\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               },
               "Output{\"Ref\":\"vpcdev1IngressSubnet1SubnetFC0D9474\"}": {
                 "id": "Output{\"Ref\":\"vpcdev1IngressSubnet1SubnetFC0D9474\"}",
-                "path": "cdk-blog-vpc-dev1/Exports/Output{\"Ref\":\"vpcdev1IngressSubnet1SubnetFC0D9474\"}"
+                "path": "cdk-blog-vpc-dev1/Exports/Output{\"Ref\":\"vpcdev1IngressSubnet1SubnetFC0D9474\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc1-ec2": {
@@ -374,6 +490,10 @@
                       "Version": "2012-10-17"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.102.0"
                 }
               },
               "DefaultPolicy": {
@@ -407,10 +527,22 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Policy",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.102.0"
             }
           },
           "SecurityGroup": {
@@ -444,8 +576,16 @@
                       "Fn::ImportValue": "cdk-blog-vpc-dev1:ExportsOutputRefvpcdev122B8E28D3296F345"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+              "version": "1.102.0"
             }
           },
           "Instance": {
@@ -480,8 +620,16 @@
                           "Fn::ImportValue": "cdk-blog-vpc-dev1:ExportsOutputRefvpcdev122B8E28D3296F345"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                  "version": "1.102.0"
                 }
               },
               "InstanceProfile": {
@@ -496,6 +644,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnInstanceProfile",
+                  "version": "1.102.0"
                 }
               },
               "Resource": {
@@ -504,13 +656,11 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::Instance",
                   "aws:cdk:cloudformation:props": {
-                    "availabilityZone": "ca-central-1a",
+                    "availabilityZone": "us-gov-east-1a",
                     "iamInstanceProfile": {
                       "Ref": "InstanceInstanceProfileAB5AEF02"
                     },
-                    "imageId": {
-                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-                    },
+                    "imageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
                     "instanceType": "t2.micro",
                     "keyName": "test-ec2",
                     "securityGroupIds": [
@@ -540,18 +690,38 @@
                       "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInstance",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Instance",
+              "version": "1.102.0"
             }
-          },
-          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
-            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
-            "path": "cdk-blog-vpc1-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
           },
           "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
             "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
-            "path": "cdk-blog-vpc1-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+            "path": "cdk-blog-vpc1-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc1-ec2/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
+            }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc-dev2": {
@@ -568,7 +738,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.73.0.0/16",
+                    "cidrBlock": "10.22.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -579,6 +749,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet1": {
@@ -591,17 +765,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.73.0.0/24",
+                        "cidrBlock": "10.22.0.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
-                        "availabilityZone": "ca-central-1a",
+                        "availabilityZone": "us-gov-east-1a",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet1"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -609,14 +779,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet1"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet1/Acl"
+                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -634,6 +816,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -649,6 +835,10 @@
                           "Ref": "vpcdev2IngressSubnet1Subnet423F170D"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -665,8 +855,16 @@
                           "Ref": "vpcdev2IGW5BAB27B0"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet2": {
@@ -679,17 +877,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.73.1.0/24",
+                        "cidrBlock": "10.22.1.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
-                        "availabilityZone": "ca-central-1b",
+                        "availabilityZone": "us-gov-east-1b",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet2"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -697,14 +891,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet2"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet2/Acl"
+                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -722,6 +928,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -737,6 +947,10 @@
                           "Ref": "vpcdev2IngressSubnet2Subnet99425F42"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -753,8 +967,16 @@
                           "Ref": "vpcdev2IGW5BAB27B0"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet3": {
@@ -767,17 +989,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.73.2.0/24",
+                        "cidrBlock": "10.22.2.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
-                        "availabilityZone": "ca-central-1d",
+                        "availabilityZone": "us-gov-east-1c",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet3"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -785,14 +1003,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet3"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet3/Acl"
+                    "path": "cdk-blog-vpc-dev2/vpc-dev2/IngressSubnet3/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -810,6 +1040,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -825,6 +1059,10 @@
                           "Ref": "vpcdev2IngressSubnet3Subnet10BCEB2F"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -841,8 +1079,16 @@
                           "Ref": "vpcdev2IGW5BAB27B0"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IGW": {
@@ -858,6 +1104,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                  "version": "1.102.0"
                 }
               },
               "VPCGW": {
@@ -873,8 +1123,24 @@
                       "Ref": "vpcdev2IGW5BAB27B0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-dev2/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           },
           "Exports": {
@@ -883,14 +1149,30 @@
             "children": {
               "Output{\"Ref\":\"vpcdev2A6F85476\"}": {
                 "id": "Output{\"Ref\":\"vpcdev2A6F85476\"}",
-                "path": "cdk-blog-vpc-dev2/Exports/Output{\"Ref\":\"vpcdev2A6F85476\"}"
+                "path": "cdk-blog-vpc-dev2/Exports/Output{\"Ref\":\"vpcdev2A6F85476\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               },
               "Output{\"Ref\":\"vpcdev2IngressSubnet1Subnet423F170D\"}": {
                 "id": "Output{\"Ref\":\"vpcdev2IngressSubnet1Subnet423F170D\"}",
-                "path": "cdk-blog-vpc-dev2/Exports/Output{\"Ref\":\"vpcdev2IngressSubnet1Subnet423F170D\"}"
+                "path": "cdk-blog-vpc-dev2/Exports/Output{\"Ref\":\"vpcdev2IngressSubnet1Subnet423F170D\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vcp2-ec2": {
@@ -920,6 +1202,10 @@
                       "Version": "2012-10-17"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.102.0"
                 }
               },
               "DefaultPolicy": {
@@ -953,10 +1239,22 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Policy",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.102.0"
             }
           },
           "SecurityGroup": {
@@ -990,8 +1288,16 @@
                       "Fn::ImportValue": "cdk-blog-vpc-dev2:ExportsOutputRefvpcdev2A6F854763501C19D"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+              "version": "1.102.0"
             }
           },
           "Instance": {
@@ -1026,8 +1332,16 @@
                           "Fn::ImportValue": "cdk-blog-vpc-dev2:ExportsOutputRefvpcdev2A6F854763501C19D"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                  "version": "1.102.0"
                 }
               },
               "InstanceProfile": {
@@ -1042,6 +1356,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnInstanceProfile",
+                  "version": "1.102.0"
                 }
               },
               "Resource": {
@@ -1050,13 +1368,11 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::Instance",
                   "aws:cdk:cloudformation:props": {
-                    "availabilityZone": "ca-central-1a",
+                    "availabilityZone": "us-gov-east-1a",
                     "iamInstanceProfile": {
                       "Ref": "InstanceInstanceProfileAB5AEF02"
                     },
-                    "imageId": {
-                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-                    },
+                    "imageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
                     "instanceType": "t2.micro",
                     "keyName": "test-ec2",
                     "securityGroupIds": [
@@ -1086,18 +1402,38 @@
                       "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInstance",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Instance",
+              "version": "1.102.0"
             }
-          },
-          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
-            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
-            "path": "cdk-blog-vcp2-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
           },
           "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
             "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
-            "path": "cdk-blog-vcp2-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+            "path": "cdk-blog-vcp2-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vcp2-ec2/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
+            }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc-staging": {
@@ -1114,7 +1450,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.74.0.0/16",
+                    "cidrBlock": "10.23.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -1125,6 +1461,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPC",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet1": {
@@ -1137,17 +1477,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.74.0.0/24",
+                        "cidrBlock": "10.23.0.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
-                        "availabilityZone": "ca-central-1a",
+                        "availabilityZone": "us-gov-east-1a",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet1"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -1155,14 +1491,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet1"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet1/Acl"
+                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet1/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -1180,6 +1528,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -1195,6 +1547,10 @@
                           "Ref": "vpcstagingIngressSubnet1Subnet9C6D6AEE"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -1211,8 +1567,16 @@
                           "Ref": "vpcstagingIGW6EB96F69"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet2": {
@@ -1225,17 +1589,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.74.1.0/24",
+                        "cidrBlock": "10.23.1.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
-                        "availabilityZone": "ca-central-1b",
+                        "availabilityZone": "us-gov-east-1b",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet2"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -1243,14 +1603,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet2"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet2/Acl"
+                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet2/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -1268,6 +1640,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -1283,6 +1659,10 @@
                           "Ref": "vpcstagingIngressSubnet2SubnetE7A9F880"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -1299,8 +1679,16 @@
                           "Ref": "vpcstagingIGW6EB96F69"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IngressSubnet3": {
@@ -1313,17 +1701,13 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.74.2.0/24",
+                        "cidrBlock": "10.23.2.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
-                        "availabilityZone": "ca-central-1d",
+                        "availabilityZone": "us-gov-east-1c",
                         "mapPublicIpOnLaunch": true,
                         "tags": [
-                          {
-                            "key": "Name",
-                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet3"
-                          },
                           {
                             "key": "aws-cdk:subnet-name",
                             "value": "Ingress"
@@ -1331,14 +1715,26 @@
                           {
                             "key": "aws-cdk:subnet-type",
                             "value": "Public"
+                          },
+                          {
+                            "key": "Name",
+                            "value": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet3"
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnet",
+                      "version": "1.102.0"
                     }
                   },
                   "Acl": {
                     "id": "Acl",
-                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet3/Acl"
+                    "path": "cdk-blog-vpc-staging/vpc-staging/IngressSubnet3/Acl",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   },
                   "RouteTable": {
                     "id": "RouteTable",
@@ -1356,6 +1752,10 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRouteTable",
+                      "version": "1.102.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -1371,6 +1771,10 @@
                           "Ref": "vpcstagingIngressSubnet3SubnetDFF4155B"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSubnetRouteTableAssociation",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultRoute": {
@@ -1387,8 +1791,16 @@
                           "Ref": "vpcstagingIGW6EB96F69"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnRoute",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.PublicSubnet",
+                  "version": "1.102.0"
                 }
               },
               "IGW": {
@@ -1404,6 +1816,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInternetGateway",
+                  "version": "1.102.0"
                 }
               },
               "VPCGW": {
@@ -1419,8 +1835,24 @@
                       "Ref": "vpcstagingIGW6EB96F69"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnVPCGatewayAttachment",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Vpc",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-staging/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           },
           "Exports": {
@@ -1429,14 +1861,30 @@
             "children": {
               "Output{\"Ref\":\"vpcstagingF0BF23A4\"}": {
                 "id": "Output{\"Ref\":\"vpcstagingF0BF23A4\"}",
-                "path": "cdk-blog-vpc-staging/Exports/Output{\"Ref\":\"vpcstagingF0BF23A4\"}"
+                "path": "cdk-blog-vpc-staging/Exports/Output{\"Ref\":\"vpcstagingF0BF23A4\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               },
               "Output{\"Ref\":\"vpcstagingIngressSubnet1Subnet9C6D6AEE\"}": {
                 "id": "Output{\"Ref\":\"vpcstagingIngressSubnet1Subnet9C6D6AEE\"}",
-                "path": "cdk-blog-vpc-staging/Exports/Output{\"Ref\":\"vpcstagingIngressSubnet1Subnet9C6D6AEE\"}"
+                "path": "cdk-blog-vpc-staging/Exports/Output{\"Ref\":\"vpcstagingIngressSubnet1Subnet9C6D6AEE\"}",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnOutput",
+                  "version": "1.102.0"
+                }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc-staging-ec2": {
@@ -1466,6 +1914,10 @@
                       "Version": "2012-10-17"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.102.0"
                 }
               },
               "DefaultPolicy": {
@@ -1499,10 +1951,22 @@
                           }
                         ]
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Policy",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.102.0"
             }
           },
           "SecurityGroup": {
@@ -1536,8 +2000,16 @@
                       "Fn::ImportValue": "cdk-blog-vpc-staging:ExportsOutputRefvpcstagingF0BF23A463A94C5D"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+              "version": "1.102.0"
             }
           },
           "Instance": {
@@ -1572,8 +2044,16 @@
                           "Fn::ImportValue": "cdk-blog-vpc-staging:ExportsOutputRefvpcstagingF0BF23A463A94C5D"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-ec2.CfnSecurityGroup",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.SecurityGroup",
+                  "version": "1.102.0"
                 }
               },
               "InstanceProfile": {
@@ -1588,6 +2068,10 @@
                       }
                     ]
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnInstanceProfile",
+                  "version": "1.102.0"
                 }
               },
               "Resource": {
@@ -1596,13 +2080,11 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::Instance",
                   "aws:cdk:cloudformation:props": {
-                    "availabilityZone": "ca-central-1a",
+                    "availabilityZone": "us-gov-east-1a",
                     "iamInstanceProfile": {
                       "Ref": "InstanceInstanceProfileAB5AEF02"
                     },
-                    "imageId": {
-                      "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
-                    },
+                    "imageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
                     "instanceType": "t2.micro",
                     "keyName": "test-ec2",
                     "securityGroupIds": [
@@ -1632,18 +2114,38 @@
                       "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-ec2.CfnInstance",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.Instance",
+              "version": "1.102.0"
             }
-          },
-          "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": {
-            "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter",
-            "path": "cdk-blog-vpc-staging-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter"
           },
           "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118": {
             "id": "SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
-            "path": "cdk-blog-vpc-staging-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118"
+            "path": "cdk-blog-vpc-staging-ec2/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn2-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-staging-ec2/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
+            }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc-peer1": {
@@ -1681,8 +2183,24 @@
                   }
                 ]
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.CfnVPCPeeringConnection",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-peer1/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-vpc-peer2": {
@@ -1720,8 +2238,24 @@
                   }
                 ]
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-ec2.CfnVPCPeeringConnection",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-vpc-peer2/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       },
       "cdk-blog-custom-resource": {
@@ -1755,6 +2289,10 @@
                           "Version": "2012-10-17"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.102.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -1801,15 +2339,31 @@
                               }
                             ]
                           }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.102.0"
                         }
                       }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.102.0"
                     }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.102.0"
                 }
               },
               "Singleton": {
                 "id": "Singleton",
-                "path": "cdk-blog-custom-resource/cdk-blog-resource/Singleton"
+                "path": "cdk-blog-custom-resource/cdk-blog-resource/Singleton",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
+                  "version": "1.102.0"
+                }
               },
               "Resource": {
                 "id": "Resource",
@@ -1817,33 +2371,57 @@
                 "children": {
                   "Default": {
                     "id": "Default",
-                    "path": "cdk-blog-custom-resource/cdk-blog-resource/Resource/Default"
+                    "path": "cdk-blog-custom-resource/cdk-blog-resource/Resource/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.102.0"
+                    }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-cloudformation.CustomResource",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           },
-          "SingletonLambdadde8099cb65f11eaac40129b54026e4d": {
-            "id": "SingletonLambdadde8099cb65f11eaac40129b54026e4d",
-            "path": "cdk-blog-custom-resource/SingletonLambdadde8099cb65f11eaac40129b54026e4d",
+          "SingletonLambda111d4c25d76911eb91ca0016eb44cd3d": {
+            "id": "SingletonLambda111d4c25d76911eb91ca0016eb44cd3d",
+            "path": "cdk-blog-custom-resource/SingletonLambda111d4c25d76911eb91ca0016eb44cd3d",
             "children": {
               "Code": {
                 "id": "Code",
-                "path": "cdk-blog-custom-resource/SingletonLambdadde8099cb65f11eaac40129b54026e4d/Code",
+                "path": "cdk-blog-custom-resource/SingletonLambda111d4c25d76911eb91ca0016eb44cd3d/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "cdk-blog-custom-resource/SingletonLambdadde8099cb65f11eaac40129b54026e4d/Code/Stage"
+                    "path": "cdk-blog-custom-resource/SingletonLambda111d4c25d76911eb91ca0016eb44cd3d/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.102.0"
+                    }
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "cdk-blog-custom-resource/SingletonLambdadde8099cb65f11eaac40129b54026e4d/Code/AssetBucket"
+                    "path": "cdk-blog-custom-resource/SingletonLambda111d4c25d76911eb91ca0016eb44cd3d/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.102.0"
+                    }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.102.0"
                 }
               },
               "Resource": {
                 "id": "Resource",
-                "path": "cdk-blog-custom-resource/SingletonLambdadde8099cb65f11eaac40129b54026e4d/Resource",
+                "path": "cdk-blog-custom-resource/SingletonLambda111d4c25d76911eb91ca0016eb44cd3d/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -1885,18 +2463,26 @@
                         ]
                       }
                     },
-                    "handler": "lambda_function.lambda_handler",
                     "role": {
                       "Fn::GetAtt": [
                         "cdkblogresourceRolelambda80C32557",
                         "Arn"
                       ]
                     },
+                    "handler": "lambda_function.lambda_handler",
                     "runtime": "python3.7",
                     "timeout": 300
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.102.0"
             }
           },
           "AssetParameters": {
@@ -1909,26 +2495,66 @@
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/S3Bucket"
+                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.102.0"
+                    }
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/S3VersionKey"
+                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.102.0"
+                    }
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/ArtifactHash"
+                    "path": "cdk-blog-custom-resource/AssetParameters/1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.102.0"
+                    }
                   }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.102.0"
                 }
               }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
             }
           },
           "ResponseMessage": {
             "id": "ResponseMessage",
-            "path": "cdk-blog-custom-resource/ResponseMessage"
+            "path": "cdk-blog-custom-resource/ResponseMessage",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.102.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-blog-custom-resource/CDKMetadata",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.102.0"
+            }
           }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.102.0"
         }
       }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.102.0"
     }
   }
 }
