@@ -26,7 +26,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.20.0.0/16",
+                    "cidrBlock": "10.14.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -53,7 +53,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.20.0.0/24",
+                        "cidrBlock": "10.14.0.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
@@ -165,7 +165,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.20.1.0/24",
+                        "cidrBlock": "10.14.1.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
@@ -277,7 +277,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.20.2.0/24",
+                        "cidrBlock": "10.14.2.0/24",
                         "vpcId": {
                           "Ref": "vpcdev122B8E28D"
                         },
@@ -687,7 +687,7 @@
                       }
                     ],
                     "userData": {
-                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
+                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/ddarling85/rouxelec-ec2_user_data-clone.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
                 },
@@ -738,7 +738,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.21.0.0/16",
+                    "cidrBlock": "10.15.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -765,7 +765,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.21.0.0/24",
+                        "cidrBlock": "10.15.0.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
@@ -877,7 +877,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.21.1.0/24",
+                        "cidrBlock": "10.15.1.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
@@ -989,7 +989,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.21.2.0/24",
+                        "cidrBlock": "10.15.2.0/24",
                         "vpcId": {
                           "Ref": "vpcdev2A6F85476"
                         },
@@ -1399,7 +1399,7 @@
                       }
                     ],
                     "userData": {
-                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
+                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/ddarling85/rouxelec-ec2_user_data-clone.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
                 },
@@ -1450,7 +1450,7 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::EC2::VPC",
                   "aws:cdk:cloudformation:props": {
-                    "cidrBlock": "10.22.0.0/16",
+                    "cidrBlock": "10.16.0.0/16",
                     "enableDnsHostnames": true,
                     "enableDnsSupport": true,
                     "instanceTenancy": "default",
@@ -1477,7 +1477,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.22.0.0/24",
+                        "cidrBlock": "10.16.0.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
@@ -1589,7 +1589,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.22.1.0/24",
+                        "cidrBlock": "10.16.1.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
@@ -1701,7 +1701,7 @@
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::EC2::Subnet",
                       "aws:cdk:cloudformation:props": {
-                        "cidrBlock": "10.22.2.0/24",
+                        "cidrBlock": "10.16.2.0/24",
                         "vpcId": {
                           "Ref": "vpcstagingF0BF23A4"
                         },
@@ -2111,7 +2111,7 @@
                       }
                     ],
                     "userData": {
-                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/rouxelec/ec2_user_data.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
+                      "Fn::Base64": "#!/bin/bash\nyum update -y\nyum install python3 -y\nyum install git -y\npip3 install boto3\ngit clone https://github.com/ddarling85/rouxelec-ec2_user_data-clone.git\necho \"* * * * * python3 /ec2_user_data/userdata.py\" >> /tmp/montest\ncrontab /tmp/montest"
                     }
                   }
                 },
@@ -2389,17 +2389,17 @@
               "version": "1.102.0"
             }
           },
-          "SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d": {
-            "id": "SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d",
-            "path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d",
+          "SingletonLambda644694f61f2011ecbd3a0016eb44cd3d": {
+            "id": "SingletonLambda644694f61f2011ecbd3a0016eb44cd3d",
+            "path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d",
             "children": {
               "Code": {
                 "id": "Code",
-                "path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d/Code",
+                "path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d/Code/Stage",
+                    "path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d/Code/Stage",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.AssetStaging",
                       "version": "1.102.0"
@@ -2407,7 +2407,7 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d/Code/AssetBucket",
+                    "path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.Resource",
                       "version": "1.102.0"
@@ -2421,7 +2421,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d/Resource",
+                "path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {

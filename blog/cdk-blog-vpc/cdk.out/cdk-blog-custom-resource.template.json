@@ -66,7 +66,7 @@
       "Properties": {
         "ServiceToken": {
           "Fn::GetAtt": [
-            "SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d9ED55848",
+            "SingletonLambda644694f61f2011ecbd3a0016eb44cd3d83F85008",
             "Arn"
           ]
         },
@@ -78,7 +78,7 @@
         "aws:cdk:path": "cdk-blog-custom-resource/cdk-blog-resource/Resource/Default"
       }
     },
-    "SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d9ED55848": {
+    "SingletonLambda644694f61f2011ecbd3a0016eb44cd3d83F85008": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
@@ -134,7 +134,7 @@
         "cdkblogresourceRolelambda80C32557"
       ],
       "Metadata": {
-        "aws:cdk:path": "cdk-blog-custom-resource/SingletonLambda4e2af1841f1911ecb6b70016eb44cd3d/Resource",
+        "aws:cdk:path": "cdk-blog-custom-resource/SingletonLambda644694f61f2011ecbd3a0016eb44cd3d/Resource",
         "aws:asset:path": "asset.1113f0ed7775f9c02fd4993e47cb76fca4223a4c0aca7cd3afb055c650ba7987",
         "aws:asset:property": "Code"
       }

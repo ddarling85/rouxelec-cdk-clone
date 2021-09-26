@@ -221,7 +221,7 @@ class EC2InstanceStack(core.Stack):
         instance.add_security_group(allow_ping_security_group)
 
         instance.user_data.add_commands(
-            "yum update -y","yum install python3 -y","yum install git -y","pip3 install boto3","git clone https://github.com/ddarling85/ec2_user_data.git",'echo "* * * * * python3 /ec2_user_data/userdata.py" >> /tmp/montest','crontab /tmp/montest'
+            "yum update -y","yum install python3 -y","yum install git -y","pip3 install boto3","git clone https://github.com/ddarling85/rouxelec-ec2_user_data-clone.git",'echo "* * * * * python3 /ec2_user_data/userdata.py" >> /tmp/montest','crontab /tmp/montest'
         )
 
         
