@@ -18,7 +18,7 @@ import ipaddress
 
 #VPC informations
 vpc_size="/16"
-default_vpc_cidr_range="10.15.0.0"+vpc_size
+default_vpc_cidr_range="10.13.0.0"+vpc_size
 max_vpc_cidr_range="10.255.0.0"+vpc_size
 vpc_nb_ips=65536
 
@@ -214,14 +214,14 @@ class EC2InstanceStack(core.Stack):
             instance_type=ec2.InstanceType("t2.micro"),
             machine_image=amzn_linux,
             vpc = vpc,
-            key_name = "test-ec2",
+            key_name = "govCloud-East1",
             role = my_ec2_role
             )
 
         instance.add_security_group(allow_ping_security_group)
 
         instance.user_data.add_commands(
-            "yum update -y","yum install python3 -y","yum install git -y","pip3 install boto3","git clone https://github.com/rouxelec/ec2_user_data.git",'echo "* * * * * python3 /ec2_user_data/userdata.py" >> /tmp/montest','crontab /tmp/montest'
+            "yum update -y","yum install python3 -y","yum install git -y","pip3 install boto3","git clone https://github.com/ddarling85/ec2_user_data.git",'echo "* * * * * python3 /ec2_user_data/userdata.py" >> /tmp/montest','crontab /tmp/montest'
         )
 
         

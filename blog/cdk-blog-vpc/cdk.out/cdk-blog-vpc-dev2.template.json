@@ -3,7 +3,7 @@
     "vpcdev2A6F85476": {
       "Type": "AWS::EC2::VPC",
       "Properties": {
-        "CidrBlock": "10.22.0.0/16",
+        "CidrBlock": "10.21.0.0/16",
         "EnableDnsHostnames": true,
         "EnableDnsSupport": true,
         "InstanceTenancy": "default",
@@ -21,7 +21,7 @@
     "vpcdev2IngressSubnet1Subnet423F170D": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.22.0.0/24",
+        "CidrBlock": "10.21.0.0/24",
         "VpcId": {
           "Ref": "vpcdev2A6F85476"
         },
@@ -98,7 +98,7 @@
     "vpcdev2IngressSubnet2Subnet99425F42": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.22.1.0/24",
+        "CidrBlock": "10.21.1.0/24",
         "VpcId": {
           "Ref": "vpcdev2A6F85476"
         },
@@ -175,7 +175,7 @@
     "vpcdev2IngressSubnet3Subnet10BCEB2F": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.22.2.0/24",
+        "CidrBlock": "10.21.2.0/24",
         "VpcId": {
           "Ref": "vpcdev2A6F85476"
         },

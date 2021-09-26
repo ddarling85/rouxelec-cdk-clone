@@ -123,7 +123,7 @@
         },
         "ImageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
         "InstanceType": "t2.micro",
-        "KeyName": "test-ec2",
+        "KeyName": "govCloud-East1",
         "SecurityGroupIds": [
           {
             "Fn::GetAtt": [

@@ -3,7 +3,7 @@
     "vpcstagingF0BF23A4": {
       "Type": "AWS::EC2::VPC",
       "Properties": {
-        "CidrBlock": "10.23.0.0/16",
+        "CidrBlock": "10.22.0.0/16",
         "EnableDnsHostnames": true,
         "EnableDnsSupport": true,
         "InstanceTenancy": "default",
@@ -21,7 +21,7 @@
     "vpcstagingIngressSubnet1Subnet9C6D6AEE": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.23.0.0/24",
+        "CidrBlock": "10.22.0.0/24",
         "VpcId": {
           "Ref": "vpcstagingF0BF23A4"
         },
@@ -98,7 +98,7 @@
     "vpcstagingIngressSubnet2SubnetE7A9F880": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.23.1.0/24",
+        "CidrBlock": "10.22.1.0/24",
         "VpcId": {
           "Ref": "vpcstagingF0BF23A4"
         },
@@ -175,7 +175,7 @@
     "vpcstagingIngressSubnet3SubnetDFF4155B": {
       "Type": "AWS::EC2::Subnet",
       "Properties": {
-        "CidrBlock": "10.23.2.0/24",
+        "CidrBlock": "10.22.2.0/24",
         "VpcId": {
           "Ref": "vpcstagingF0BF23A4"
         },
